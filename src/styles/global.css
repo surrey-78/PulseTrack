@@ -1,0 +1,243 @@
+/* --- Home / Hero Section Styles --- */
+
+/* Main Container: Centers everything and handles the background color */
+.hero-container {
+    position: relative;
+    height: calc(100vh - 80px); /* Full screen height minus Navbar height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f8fafc; /* Light slate background */
+    overflow: hidden;
+    padding: 0 1rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Typography */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a; /* Dark Navy */
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* The Blue Highlight text */
+.highlight {
+    color: #2563eb;
+    background: linear-gradient(180deg, transparent 60%, #dbeafe 60%); /* Marker pen effect */
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: #475569; /* Slate Gray */
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+}
+
+/* The small pill/badge above the title */
+.badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #3b82f6;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* Pill shape */
+    border: 1px solid #bfdbfe;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #0f172a; /* Dark button for high contrast */
+    color: #ffffff;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Background Pattern (Subtle Grid) */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.5;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+}
+
+/* Ensure content is above background */
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    .hero-container {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+}
+
+/* --- Form / Predict Page Styles --- */
+
+/* Centers the form on the page */
+.page-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9; /* Light gray background */
+    padding: 2rem 1rem;
+}
+
+/* The White Card */
+.form-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 700px; /* Limits width so it looks good on big screens */
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.form-header h2 {
+    margin: 0 0 0.5rem 0;
+    color: #1e293b;
+    font-size: 1.75rem;
+}
+
+.form-header p {
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1rem;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Grid Layout for Inputs (2 columns on desktop, 1 on mobile) */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.input-group input, 
+.input-group select {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background-color: #fff;
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    outline: none;
+    border-color: #2563eb; /* Focus Blue */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Divider Line */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 2rem 0;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-submit:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #fecaca;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Stack inputs on small screens */
+    }
+    .form-card {
+        padding: 1.5rem;
+    }
+}

@@ -1,21 +1,14 @@
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import Predict from './pages/Predict'
-import Results from './pages/Results'
-import './App.css';
+
+import PulseTrackPage from './pages/PulseTrackPage.jsx';
+// Ensure you import a global CSS file here for styling
+// import './styles/global.css'; 
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/predict" element={<Predict />} />
-        <Route path="/results" element={<Results />} />
-      </Routes>
-    </>
-  )
+    <div className="app-root">
+      <PulseTrackPage />
+    </div>
+  );
 }
 
 export default App;
